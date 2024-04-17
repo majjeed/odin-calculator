@@ -94,3 +94,16 @@ equalBtn.addEventListener('click', () => {
     calcDisplayVal = calcDisplay.textContent;
 });
 
+const dotBtn = document.querySelector('.dotBtn');
+
+dotBtn.addEventListener('click', () => {
+    calcDisplay.textContent += '.';
+    dotBtn.setAttribute('disabled', '');
+});
+
+const keyPadOptBtns = document.querySelectorAll('.calcKeyPadOperator button');
+keyPadOptBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        dotBtn.removeAttribute('disabled');
+    })
+})
