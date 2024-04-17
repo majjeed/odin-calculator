@@ -86,8 +86,8 @@ const equalBtn = document.querySelector('.equalBtn');
 equalBtn.addEventListener('click', () => {
     //regex for not digit
     //bug picks up dot instead TODO: ignore dot
-    let optArr = calcDisplay.textContent.match(/\D/g);
-    let numArr = calcDisplay.textContent.split(/\D/);
+    let optArr = calcDisplay.textContent.match(/[+\-x%]/g);
+    let numArr = calcDisplay.textContent.split(/[+\-x%]/);
     //the order is firstNum, secondNum, operator 
     let result = operate(numArr[0], numArr[1], optArr[0]).toFixed(2);
     calcDisplay.textContent = `${result}${optArr[1] || ''}`;
