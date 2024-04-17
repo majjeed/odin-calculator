@@ -25,6 +25,7 @@ const divide = (a, b) => {
     return a / b;
 };
 
+//so far never used
 let firstNum = 0;
 let secondNum = 0;
 let operator = 'none';
