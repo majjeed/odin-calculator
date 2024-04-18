@@ -1,7 +1,7 @@
-const p = document.createElement('p');
-p.textContent = 'js test...';
+// const p = document.createElement('p');
+// p.textContent = 'js test...';
 
-document.querySelector('body').appendChild(p);
+// document.querySelector('body').appendChild(p);
 
 
 const add = (a,b) => {
@@ -91,7 +91,7 @@ equalBtn.addEventListener('click', () => {
     let numArr = calcDisplay.textContent.split(/[+\-x%]/);
     //the order is firstNum, secondNum, operator 
     let result = operate(numArr[0], numArr[1], optArr[0]).toFixed(2);
-    calcDisplay.textContent = `${result}${optArr[1] || ''}`;
+    calcDisplay.textContent = `${result.replace('.00', '')}${optArr[1] || ''}`;
     calcDisplayVal = calcDisplay.textContent;
 });
 
